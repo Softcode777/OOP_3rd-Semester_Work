@@ -2,7 +2,7 @@ package LAB_4;
 
 public class Lab4_Task3_Fraction_Main {
         public static void main(String[] args) {
-            Fraction f1 = new Fraction(6, 10);
+            Fraction f1 = new Fraction(8, 10);
             Fraction f2 = new Fraction(1, 2);
 
             f1.display();  // 2/4
