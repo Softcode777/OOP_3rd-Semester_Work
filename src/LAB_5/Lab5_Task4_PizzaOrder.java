@@ -15,6 +15,8 @@ class PizzaOrder {
         this.pizza2 = pizza2;
         this.pizza3 = pizza3;
     }
+
+//    Method to calculate total
     public double calcTotal() {
         double total = 0.0;
         if (pizza1 != null) total += pizza1.calculateCost();
