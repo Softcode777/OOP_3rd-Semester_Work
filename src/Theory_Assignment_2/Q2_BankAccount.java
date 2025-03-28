@@ -10,8 +10,7 @@ public class Q2_BankAccount {
             this.accountHolderName = accountHolderName;
             this.balance = initialBalance;
         }
-
-        //  Method to Deposit
+        //  Method for Deposit
         public void deposit(double amount) {
             if (amount > 0) {
                 balance += amount;
@@ -20,8 +19,7 @@ public class Q2_BankAccount {
                 System.out.println("Invalid deposit amount!");
             }
         }
-
-        // Method to Withdraw
+        // Method for Withdraw
         public void withdraw(double amount) {
             if (amount > 0 && amount <= balance) {
                 balance -= amount;
@@ -30,14 +28,11 @@ public class Q2_BankAccount {
                 System.out.println("Invalid withdrawal amount or insufficient balance!");
             }
         }
-
         //  Method to Get Balance
         public double getBalance() {
             return balance;
         }
-
-//        Method to Get AccountHolderName
-
+//        Method to get AccountHolderName
         public String getAccountHolderName() {
             return accountHolderName;
         }

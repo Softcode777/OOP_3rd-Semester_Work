@@ -24,7 +24,7 @@ public class Q1_Student {
         public void registerCourse(Q1_Course course) {
             registeredCourses.add(course);
             System.out.println(name + " has registered for: " + course.getCourseName());
-            System.out.println("");
+
         }
     }
 

@@ -6,7 +6,6 @@ public class Q3_Employee {
     private String name;
     private Q3_Address address; // Composition
 
-    // Constructor for Employee
     public Q3_Employee(int employeeId, String name, Q3_Address address) {
         this.employeeId = employeeId;
         this.name = name;
@@ -18,8 +17,8 @@ public class Q3_Employee {
         System.out.println("Employee ID: " + employeeId);
         System.out.println("Name: " + name);
         System.out.println("Address: ");
-        System.out.println("  Street: " + address.getStreet());
-        System.out.println("  City: " + address.getCity());
-        System.out.println("  Zip Code: " + address.getZipCode());
+        System.out.println("Street: " + address.getStreet());
+        System.out.println("City: " + address.getCity());
+        System.out.println("Zip Code: " + address.getZipCode());
     }
 }
