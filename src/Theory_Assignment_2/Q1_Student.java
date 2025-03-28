@@ -12,24 +12,23 @@ public class Q1_Student {
             this.name = name;
             this.registeredCourses = new ArrayList<>();
         }
-
         public int getStudentId() {
             return studentId;
         }
-
         public String getName() {
             return name;
         }
-
         public List<Q1_Course> getRegisteredCourses() {
             return registeredCourses;
         }
-
         public void registerCourse(Q1_Course course) {
             registeredCourses.add(course);
             System.out.println(name + " has registered for: " + course.getCourseName());
+            System.out.println("");
         }
     }
+
+
 
 
 
