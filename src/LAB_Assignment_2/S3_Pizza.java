@@ -1,6 +1,4 @@
 package LAB_Assignment_2;
-
-
 public class S3_Pizza {
     private String size;
     private int cheeseToppings;
@@ -38,21 +36,21 @@ public class S3_Pizza {
     public void setHamToppings(int hamToppings) {
         this.hamToppings = hamToppings;
     }
-
     // Calculate cost of the pizza
     public double calcCost() {
         int baseCost;
         if (size.equals("small")) baseCost = 10;
         else if (size.equals("medium")) baseCost = 12;
         else baseCost = 14;
-
         return baseCost + 2 * (cheeseToppings + pepperoniToppings + hamToppings);
     }
     // Get pizza details
     public String getDescription() {
-        return "Size: " + size + ", Cheese Toppings: " + cheeseToppings +
-                ", Pepperoni Toppings: " + pepperoniToppings +
-                ", Ham Toppings: " + hamToppings +
-                ", Total Cost: $" + calcCost();
+        return "\nSize: " + size +
+                "\n Cheese Toppings: " + cheeseToppings +
+                "\n Pepperoni Toppings: " + pepperoniToppings +
+                "\n Ham Toppings: " + hamToppings +
+                "\n Total Cost: $" + calcCost();
+
     }
 }

@@ -18,5 +18,4 @@ public class S4_Book extends S4_Publication {
         super.display();
         System.out.println("Page Count: " + pageCount);
     }
-
 }

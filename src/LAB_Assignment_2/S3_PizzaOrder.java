@@ -1,28 +1,26 @@
 package LAB_Assignment_2;
 
-public class S3_PizzaOrder {
-    private S3_Pizza[] pizzas;
-
-    // Constructor
-    public S3_PizzaOrder() {
-        pizzas = new S3_Pizza[3]; // Up to three pizzas
+class PizzaOrder {
+    private S3_Pizza pizza1;
+    private S3_Pizza pizza2;
+    private S3_Pizza pizza3;
+    public PizzaOrder(S3_Pizza pizza1){
+        this.pizza1 = pizza1;
     }
-
-    // Add a pizza to the order
-    public void setPizza(int index, S3_Pizza pizza) {
-        if (index >= 0 && index < pizzas.length) {
-            pizzas[index] = pizza;
-        }
+    public PizzaOrder(S3_Pizza pizza1,S3_Pizza pizza2){
+        this.pizza1 = pizza1;
+        this.pizza2 = pizza2;
     }
-
-    // Calculate total cost of the order
-    public double calcTotalCost() {
-        double totalCost = 0;
-        for (S3_Pizza pizza : pizzas) {
-            if (pizza != null) {
-                totalCost += pizza.calcCost();
-            }
-        }
-        return totalCost;
+    public PizzaOrder(S3_Pizza pizza1,S3_Pizza pizza2,S3_Pizza pizza3){
+        this.pizza1 = pizza1;
+        this.pizza2 = pizza2;
+        this.pizza3 = pizza3;
+    }
+    public double calcTotal() {
+        double total = 0.0;
+        if (pizza1 != null) total += pizza1.calcCost();
+        if (pizza2 != null) total += pizza2.calcCost();
+        if (pizza3 != null) total += pizza3.calcCost();
+        return total;
     }
 }

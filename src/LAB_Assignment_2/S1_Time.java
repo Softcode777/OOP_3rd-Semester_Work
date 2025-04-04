@@ -41,7 +41,6 @@ public class S1_Time {
     public void setSeconds(int seconds) {
         this.seconds = seconds;
     }
-
     private boolean isValidTime(int hours, int minutes, int seconds) {
         return (hours >= 0 && hours < 24) && (minutes >= 0 && minutes < 60) && (seconds >= 0 && seconds < 60);
     }

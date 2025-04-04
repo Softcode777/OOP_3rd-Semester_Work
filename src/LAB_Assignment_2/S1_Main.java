@@ -1,13 +1,11 @@
 package LAB_Assignment_2;
-
 //Scenario 01: Time Management System
-
 public class S1_Main {
     public static void main(String[] args) {
         S1_Time time1 = new S1_Time();
         time1.displayTime();
 
-        S1_Time time2 = new S1_Time(12, 30, 45);
+        S1_Time time2 = new S1_Time(15, 15, 20);
         time2.displayTime();
 
         S1_Time time3 = new S1_Time(25, 65, 70);

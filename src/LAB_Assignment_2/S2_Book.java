@@ -1,59 +1,59 @@
 package LAB_Assignment_2;
-
-public class S2_Book {
+class S2_Book {
     private String author;
     private String[] chapterNames;
+    private int chapterCount;
 
+    //  No-argument constructor
     public S2_Book() {
-        this.author = "NA";
-        this.chapterNames = new String[100];
+        this.author = "Unknown";
+        this.chapterNames = new String[100]; // Maximum of 100 chapters
+        this.chapterCount = 0;
     }
 
+    //  Parameterized constructor
     public S2_Book(String author, String[] chapterNames) {
         this.author = author;
-        this.chapterNames = chapterNames;
-    }
+        this.chapterNames = new String[100];
+        this.chapterCount = chapterNames.length;
 
-    public String getAuthor() {
-        return author;
+        //Using a simple for loop to copy chapter names
+        for (int i = 0; i < chapterCount; i++) {
+            this.chapterNames[i] = chapterNames[i]; // Copy chapter names
+        }
     }
     public void setAuthor(String author) {
         this.author = author;
     }
-    public String[] getChapterNames() {
-        return chapterNames;
+    public String getAuthor() {
+        return author;
     }
     public void setChapterNames(String[] chapterNames) {
-        this.chapterNames = chapterNames;
+        this.chapterCount = chapterNames.length; // Update chapter count
+        for (int i = 0; i < chapterCount; i++) {
+            this.chapterNames[i] = chapterNames[i]; // Copy chapters
+        }
+    }
+
+    public int getChapterCount() {
+        return chapterCount;
     }
 
     public boolean compareBooks(S2_Book b) {
-        if (this.author.equals(b.getAuthor())) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.author.equals(b.author);
     }
 
+    // 🔹 Compare number of chapters (simplified)
     public S2_Book compareChapterNames(S2_Book b) {
-        int thisChapterCount = countChapters(this.chapterNames);
-        int otherChapterCount = countChapters(b.getChapterNames());
-
-        if (thisChapterCount > otherChapterCount) {
-            return this;
-        } else {
-            return b;
-        }
+        return (this.chapterCount >= b.chapterCount) ? this : b;
     }
 
-    // Helper method to count non-null chapters
-    private int countChapters(String[] chapters) {
-        int count = 0;
-        for (String chapter : chapters) {
-            if (chapter != null) {
-                count++;
-            }
-        }
-        return count;
+    // 🔹 Display book details
+    public void displayBook() {
+        System.out.println("Author: " + author);
+        System.out.println("Number of Chapters: " + chapterCount);
+        System.out.println("-----------------------------");
     }
 }
+
+
