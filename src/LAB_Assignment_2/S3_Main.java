@@ -17,7 +17,7 @@ public class S3_Main {
         System.out.println("pizza cost is:"+pizza3.calcCost());
         System.out.println("--------------------");
 
-        PizzaOrder Order = new PizzaOrder(pizza1,pizza2);
+        S3_PizzaOrder Order = new S3_PizzaOrder(pizza1,pizza2);
         double total = Order.calcTotal();
         System.out.println("Total cost of order pizza1 and pizza2 is :"+total);
 
