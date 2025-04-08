@@ -4,6 +4,7 @@ public class Q2_BankAccount {
         private String accountNumber;
         private double balance;
         private String accountHolderName;
+        private String intialbalance;
 
         public Q2_BankAccount(String accountNumber, String accountHolderName, double initialBalance) {
             this.accountNumber = accountNumber;
