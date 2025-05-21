@@ -15,10 +15,9 @@ class S2_Book {
     public S2_Book(String author, String[] chapterNames) {
         this.author = author;
         this.chapterNames = new String[100];
-        this.chapterCount = chapterNames.length;
 
         //Using a simple for loop to copy chapter names
-        for (int i = 0; i < chapterCount; i++) {
+        for (int i = 0; i < chapterNames.length; i++) {
             this.chapterNames[i] = chapterNames[i]; // Copy chapter names
         }
     }
@@ -43,12 +42,12 @@ class S2_Book {
         return this.author.equals(b.author);
     }
 
-    // 🔹 Compare number of chapters (simplified)
+    //  Compare number of chapters (simplified)
     public S2_Book compareChapterNames(S2_Book b) {
         return (this.chapterCount >= b.chapterCount) ? this : b;
     }
 
-    // 🔹 Display book details
+    //  Display book details
     public void displayBook() {
         System.out.println("Author: " + author);
         System.out.println("Number of Chapters: " + chapterCount);
